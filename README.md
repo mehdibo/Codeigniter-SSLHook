@@ -13,16 +13,16 @@ If you have other hooks copy the content of `/application/config/hooks.php` to y
 
 Enable hooks by modifying your `/application/config/config.php`, set `enable_hooks` to `TRUE`:
 ```php
-	-/*
-	|--------------------------------------------------------------------------
-	| Enable/Disable System Hooks
-	|--------------------------------------------------------------------------
-	|
-	| If you would like to use the 'hooks' feature you must enable it by
-	| setting this variable to TRUE (boolean).  See the user guide for details.
-	|
-	*/
-	$config['enable_hooks'] = TRUE;
+-/*
+|--------------------------------------------------------------------------
+| Enable/Disable System Hooks
+|--------------------------------------------------------------------------
+|
+| If you would like to use the 'hooks' feature you must enable it by
+| setting this variable to TRUE (boolean).  See the user guide for details.
+|
+*/
+$config['enable_hooks'] = TRUE;
 ```
 
 How does it work?
