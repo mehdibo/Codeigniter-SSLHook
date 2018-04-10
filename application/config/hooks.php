@@ -19,16 +19,14 @@ $hook['post_controller'][] = function()
 	// Get CI instance
 	$CI =& get_instance();
 
-	// Enable cookie_secure to use it for session cookie
+	// Only allow HTTPS cookies (no JS)
 	$CI->config->set_item('cookie_secure', TRUE);
-	// Force future requests to be over HTTPS (max-age is set to 1 month
-	$CI->output->set_header("Strict-Transport-Security: max-age=2629800");
-	// Disable MIME type sniffing
-	$CI->output->set_header("X-Content-Type-Options: nosniff");
-	// Only allow referrers to be sent withing the website
-	$CI->output->set_header("Referrer-Policy: strict-origin");
-	// Frames are not allowed
-	$CI->output->set_header("X-Frame-Options: DENY");
-	// Enable XSS protection in browser
-	$CI->output->set_header("X-XSS-Protection: 1; mode=block");
+	$CI->config->set_item('cookie_httponly', TRUE);
+	
+	// Set headers
+	$CI->output->set_header("Strict-Transport-Security: max-age=2629800")// Force future requests to be over HTTPS (max-age is set to 1 month
+			   ->set_header("X-Content-Type-Options: nosniff") // Disable MIME type sniffing
+			   ->set_header("Referrer-Policy: strict-origin") // Only allow referrers to be sent withing the website
+			   ->set_header("X-Frame-Options: DENY") // Frames are not allowed
+			   ->set_header("X-XSS-Protection: 1; mode=block"); // Enable XSS protection in browser
 };
