@@ -13,7 +13,7 @@ If you have other hooks copy the content of `/application/config/hooks.php` to y
 
 Enable hooks by modifying your `/application/config/config.php`, set `enable_hooks` to `TRUE`:
 ```php
--/*
+/*
 |--------------------------------------------------------------------------
 | Enable/Disable System Hooks
 |--------------------------------------------------------------------------
