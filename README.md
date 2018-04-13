@@ -29,7 +29,7 @@ How does it work?
 -----------------
 The hook will:
 - Redirect to the HTTPS version if accessed from a non-secure connection.
-- Make cookies only accessible via a HTTPS (no JavaScript)
+- Make cookies only accessible via HTTPS (no JavaScript)
 - Set the following headers:
   -  `Strict-Transport-Security: max-age=2629800`
   -  `X-Content-Type-Options: nosniff`
