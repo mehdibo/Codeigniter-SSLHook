@@ -10,8 +10,8 @@ $hook['post_controller'][] = function()
 		return;
 	}
 
-	// If we are not using HTTPS or in a cli
-	if(!is_https() || is_cli()){
+	// If we are not using HTTPS and not in CLI
+	if(!is_https() && !is_cli()){
 		// Redirect to the HTTPS version
 		redirect(base_url(uri_string()));
 	}
