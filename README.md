@@ -1,3 +1,5 @@
+> :warning:  I no longer maintaing this project, if you have access to the server add these headers and redirections early on before the request even reaches the application 
+
 Codeigniter-SSLHook
 ============================
 
